@@ -1,6 +1,8 @@
-package net.grey3345.tutorialmod;
+package net.grey3345.undergroundstonemod;
 
 import com.mojang.logging.LogUtils;
+import net.grey3345.undergroundstonemod.block.ModBlocks;
+import net.grey3345.undergroundstonemod.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -10,35 +12,33 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
-// The value here should match an entry in the META-INF/mods.toml file
-@Mod(TutorialMod.MOD_ID)
-public class TutorialMod {
-    public static final String MOD_ID = "tutorialmod";
+
+@Mod(UndergroundStoneMod.MOD_ID)
+public class UndergroundStoneMod {
+    public static final String MOD_ID = "undergroundstonemod";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    //heeloogfggs
-    public TutorialMod()
-    {
+    // Very Important Comment
+    public UndergroundStoneMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
+    private void commonSetup(final FMLCommonSetupEvent event) {
 
     }
 
-
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
+        public static void onClientSetup(FMLClientSetupEvent event) {
 
         }
     }

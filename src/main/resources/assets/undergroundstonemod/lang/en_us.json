@@ -1,0 +1,13 @@
+{
+  "item.undergroundstonemod.zircon": "Zircon",
+  "item.undergroundstonemod.raw_zircon": "Raw Zircon",
+  "item.undergroundstonemod.eight_ball": "Eight Ball",
+  "item.undergroundstonemod.pie": "Pie!",
+
+  "block.undergroundstonemod.zircon_block": "Block of Zircon",
+  "block.undergroundstonemod.zircon_ore": "Zircon Ore",
+  "block.undergroundstonemod.deepslate_zircon_ore": "Deepslate Zircon Ore",
+
+
+  "itemGroup.undergroundstonetab": "Zircon Tutorial Tab"
+}

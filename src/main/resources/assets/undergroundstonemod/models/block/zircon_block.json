@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "undergroundstonemod:block/zircon_block"
+  }
+}
